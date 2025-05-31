@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cancel {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+            .cancel button {
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+
+            .cancel img {
+                width: 24px;
+                height: 24px;
+            }
+
+        .content {
+            text-align: center;
+        }
+
+        .logo img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            width: 100%;
+        }
+
+        h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+            h4 span {
+                color: #3498db;
+            }
+
+        form div {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        label {
+            position: absolute;
+            top: -8px;
+            left: 10px;
+            background: white;
+            padding: 0 5px;
+            font-size: 12px;
+            color: #888;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            button[type="submit"]:hover {
+                background-color: #2980b9;
+            }
+
+        p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+            p a {
+                color: #3498db;
+                text-decoration: none;
+            }
+
+                p a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <div class="container">
+            <div class="cancel">
+                <button>
+                    <a asp-controller="Home" asp-action="Index">
+                        <img src="~/img/login/circle-xmark-regular.svg" alt="exit">
+                    </a>
+                </button>
+            </div>
+            <div class="content">
+                <div class="logo">
+                    <img src="~/img/login/logo.jpg" alt="logo">
+                </div>
+                <div class="form-container">
+                    <h4>Start your journey with <span>Soar!</span> of possibilities.</h4>
+                    <form method="post">
+                        <div>
+                            <input type="email" placeholder="Enter your Email" required name="mail" />
+                            <label for="Email">Email</label>
+                        </div>
+                        <div>
+                            <input type="password" placeholder="Enter your Password" required name="pass"/>
+                            <label for="Pass">Password</label>
+                        </div>
+                        <div>
+                            <button type="submit">Sign in</button>
+                        </div>
+                        <div>
+                            <p>Not a member? <a asp-action="Register" asp-controller="Home">Sign Up</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

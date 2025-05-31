@@ -1,0 +1,176 @@
+﻿@model Person
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Edit User</title>
+    <link rel="icon" href="~/img/person_icon.jpg" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .container {
+            width: 80vw;
+            max-width: 1000px;
+            padding: 2em 4em;
+            background-color: #afc3f6;
+            margin: 6em auto;
+            border-radius: 0.5em;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .content {
+            display: flex;
+            gap: 30px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container .cancel {
+            align-self: flex-end;
+        }
+
+            .container .cancel button {
+                width: 30px;
+                background-color: #afc3f6;
+                border: none;
+            }
+
+        .logo {
+            width: 600px;
+            height: 500px;
+        }
+
+            .logo img {
+                width: 100%;
+                height: calc(100% - 120px);
+                border-radius: 0.5em;
+            }
+
+        .form-container {
+            width: 50%;
+            /* Form takes up 50% of the container */
+        }
+
+        h4 {
+            font-size: 40px;
+            font-weight: 600;
+            color: rgb(255, 255, 255);
+        }
+
+            h4 span {
+                color: #6e75ec;
+            }
+
+        .form-group {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        label {
+            min-width: 100px;
+            /* Adjust the width as needed */
+            margin-right: 10px;
+            font-weight: 500;
+            color: #ffffff;
+            /* Label text color */
+        }
+
+        input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #d0d0d0;
+            border-radius: 0.3em;
+            background-color: #ffffff;
+            outline: none;
+        }
+
+        .form-container button {
+            font-size: 1em;
+            background-color: #6e75ec;
+            border: none;
+            color: #ffffff;
+            padding: 0.8em 0;
+            margin-top: 2em;
+            width: 100%;
+            border-radius: 0.3em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="user-info">
+        <div class="container">
+            <div class="cancel">
+                <button>
+                    <a asp-controller="Person" asp-action="AdminUser">
+                        <img src="~/img\login\circle-xmark-regular.svg"
+                             alt="exit">
+                    </a>
+                </button>
+            </div>
+            <div class="content">
+                <div class="logo">
+                    <img src="~/img/user-solid (1).svg" alt="logo">
+                </div>
+                <div class="form-container">
+                    <h4> User <span>information </span> </h4>
+                    <div></div>
+
+                    <form method="post" asp-controller="Person" asp-action="UserEdit">
+                        <div class="form-group">
+                            <label >First Name</label>
+                            <input type="text"  asp-for="@Model.FirstName" required/>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" asp-for="@Model.LastName" required/>
+                        </div>
+                        <div class="form-group">
+                            <label >Email</label>
+                            <input type="email"  asp-for="@Model.Email" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Location</label>
+                            <select asp-for="@Model.Location" style="width:100%" required>
+                                <option value="Jenin">Jenin</option>
+                                <option value="Nablus">Nablus</option>
+                                <option value="Ramallah">Ramallah</option>
+                                <option value="Hebron">Hebron</option>
+                                <option value="Jerusalem">Jerusalem</option>
+                                <option value="Bethlehem">Bethlehem</option>
+                                <option value="Gaza">Gaza</option>
+                                <option value="Rafah">Rafah</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="text" asp-for="@Model.Password" required/>
+                        </div>
+                        <input type="hidden" asp-for="@Model.PersonId" />
+                        <div class="buttons">
+                            
+                            <button type="submit" onclick="alert('The course has been successfully edited')">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

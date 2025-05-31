@@ -1,0 +1,72 @@
+﻿@model Person?
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+    <link rel="stylesheet" href="~/css/register.css" />
+</head>
+
+<body>
+        <div class="container">
+            <div class="cancel">
+                <button><a asp-controller="Home" asp-action="Index"><img src="~/img\login\circle-xmark-regular.svg"
+                            alt="exit"></a></button>
+            </div>
+            <form asp-controller="Person" asp-action="AddPerson" method="post" autocomplete="off">
+                <h4>Create your <span>own account</span> now, so you can <span>soar !</span></h4>
+                <div class="input-section">
+                    <label>First Name <span class="required-color">*</span></label>
+                    <input type="text" placeholder="Enter First Name" id="first-name-input" asp-for="FirstName" required />
+
+                </div>
+                <div class="input-section">
+                    <label>Last Name <span class="required-color">*</span></label>
+                    <input type="text " placeholder="Enter Last Name" id="last-name-input" required  asp-for="LastName"/>
+
+                </div>
+
+                <div class="input-section">
+                    <label>Email <span class="required-color">*</span></label>
+                <input type="email" placeholder="Enter Email" id="email" required asp-for="Email"/>
+                </div>
+
+                <div class="input-section">
+                    <label>Location<span class="required-color">*</span></label>
+                    <select asp-for="Location" required style="width:100%" >
+                        <option value="Jenin">Jenin</option>
+                        <option value="Nablus">Nablus</option>
+                        <option value="Ramallah">Ramallah</option>
+                        <option value="Hebron">Hebron</option>
+                        <option value="Jerusalem">Jerusalem</option>
+                        <option value="Bethlehem">Bethlehem</option>
+                        <option value="Gaza">Gaza</option>
+                        <option value="Rafah">Rafah</option>
+                    </select>
+                </div>
+
+                <div class="input-section">
+                    <label>Password <span class="required-color">*</span></label>
+                    <input type="password" placeholder="Enter Password" id="password" required asp-for="Password"/>
+
+                </div>
+                @* <div class="input-section">
+                    <label>Confirm Password <span class="required-color">*</span></label>
+                    <input type="password" id="verify-password" placeholder="Confirm Password" required />
+            </div>*@
+
+            <input type="hidden" asp-for="PersonId" />
+            <input type="hidden" asp-for="Admin" value="False" />
+
+            <button type="submit" id="submit-button" onclick="alert('Welcome')">
+                Sign Up 
+             </button>
+            </form>
+        </div>
+
+</body>
+</html>

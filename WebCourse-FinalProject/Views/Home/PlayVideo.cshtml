@@ -1,0 +1,67 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How-To-Register</title>
+    <style>
+        /* Inline CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .register-button {
+            background-color: #35424a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+            .register-button a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .register-button:hover {
+                background-color: #505a66;
+            }
+
+        .instruction-video {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="register-button">
+            <a asp-controller="Home" asp-action="Register">Register</a>
+        </button>
+        <video class="instruction-video" autoplay controls>
+            <source src="~/img/SOAR - Avast Secure Browser 2024-06-20 19-38-40.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿@model string
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serach </title>
+       <style>
+      #search {
+    font-size: 18px;
+    box-shadow: .0625em .0625em .75em .1875em rgba(0, 0, 0, .3);
+}
+
+form{
+margin: 150px auto;
+width: 350px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+text-align: center;}
+input{
+    color: #444;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    padding: .5em 0 ;
+    width: 100%;
+    border-radius: 3px;
+    text-align: center ; 
+}
+label {
+    font-size : larger ;
+}
+    </style>
+</head>
+<body>
+
+    <form asp-action="AdminCourses" asp-controller="Course" method="post">
+        <label for="search">Enter a name of course or a part of it </label>
+        <input type="text" name="key" id="search" placeholder="Search by Course Name" id="search" />
+        <input type="submit" value="Search" />
+
+    </form>
+</body>
+</html>

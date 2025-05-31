@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SOAR </title>
+    
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="icon" href="~/img/LOGO/logo.png" />
+    
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="~/img/LOGO/logo.png" alt="logo">
+                <p>Soar</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#lets-begin">Home</a></li>
+                    <li><a href="#logo">About Us</a></li>
+                    <li><a href="#links">Links </a></li>
+                    <li><a href="#Contact-us">Contact</a></li>
+                </ul>
+            </nav>
+
+
+            <div class="auth">
+                <a asp-controller="Person" asp-action="Login" class="login">Login</a>
+                <a asp-controller="Home" asp-action="Register" class="register">Register</a>
+            </div>
+        </div>
+
+
+
+    </header>
+    <section class="lets-begin" id="lets-begin">
+        <div class="container">
+            <div class="row">
+                <div class="image">
+                    <img src="~/img/Section1-Begin/Black and Blue Futuristic Educational Technology Exhibition Poster.png" alt="Section_1_Image">
+                </div>
+                <div class="introduction">
+                    <p>Let’s <span id="begins">Begins</span></p>
+
+                    <h2>Climb to New Heights <span id="blue-heights"> of Success </span> with Us!</h2>
+                    <p>"Welcome to Soar, your gateway to diverse training opportunities, empowering individuals to 
+                    elevate their skills and soar to new heights of success!"</p>
+                    <div class="buttons">
+                        <a asp-controller="Home" asp-action="Register" class="register"> Register</a>
+
+                        <div class="play-video">
+                            <a asp-controller="Home" asp-action="PlayVideo">
+                                <img src="~/img/Section1-Begin/play.svg" alt="play-icon">
+                            </a>
+                                <span>Play video</span>
+                          
+                        </div>
+                    </div>
+                    <section class="logos">
+                        <div class="container">
+                            <table>
+                                <tr>
+                                    <td> <img src="~/img/logos section/zapier.svg" alt="zapier-logo">
+                                    </td>
+                                    <td> <img src="~/img/logos section/spotify.svg" alt="spotify-logo">
+                                    </td>
+                                    <td> <img src="~/img/logos section/zoom.svg" alt="zoom-logo">
+                                    </td>
+                                    <td> <img src="~/img/logos section/amazon.svg" alt="amazon-logo">
+                                    </td>
+                                    <td> <img src="~/img/logos section/adobe.svg" alt="adobe-logo">
+                                    </td>
+                                    <td> <img src="~/img/logos section/notion.svg" alt="notion-logo">
+                                    </td>
+                                   
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+          
+        </div>
+    </section>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------- -->
+  
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------- -->
+
+      <!-- selected-course -->
+    <section class="selected-course">
+        <div class="container">
+            <div class="image">
+                <img src="~/img/selected-course/selected-course.png" alt="Section3-Image">
+            </div>
+            <div class="details">
+                <p>SELECTED COURSE</p>
+                <h2>People Taking Courses</h2>
+                <p class="paragraph">Join this era of colleagues at Soar and embark on your journey towards achieving the remarkable accomplishments that your peers are attaining. 
+                    Explore our exceptional courses and build your future with confidence and creativity</p>
+                <div class="parts">
+                    <div class="part">
+                        <span>6,000</span>
+                        <span>People Views</span>
+                    </div>
+                    <div class="part">
+                        <span>4,000</span>
+                        <span>User</span>
+                    </div>
+                    <div class="part">
+                        <span>100</span>
+                        <span>Course</span>
+                    </div>
+                </div>
+                <p></p>
+            </div>
+        </div>
+    </section><!-- Testimonials -->
+    <section class="Testimonials">
+        <p><span> Testimonials</span></p>
+        <div class="container">
+            <div class="testi">
+                <div class="heading">
+                    <img src="~/img/Testimonials/user-solid.svg" alt="profile-photo">
+                    <div class="title">
+                        <p>Mohammad</p>
+                        <p>Front-End Developer </p>
+                    </div>
+                </div>
+                <div class="evaluation">
+                    
+                    <img src="~/img/Testimonials/star-solid-lg.svg" alt="star-icon">
+                    <img src="~/img/Testimonials/star-solid-lg.svg" alt="star-icon">
+                    <img src="~/img/Testimonials/star-solid-lg.svg" alt="star-icon">
+                    <img src="~/img/Testimonials/star-solid-lg.svg" alt="star-icon">
+                    <img src="~/img/Testimonials/star-solid-lg.svg" alt="star-icon">
+
+                </div>
+                <q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, sapiente? Vel, dolores?</q>
+            </div>
+            <div class="testi">
+                <div class="heading">
+                    <img src="~/img/Testimonials/user-solid.svg" alt="profile-photo">
+                    <div class="title">
+                        <p>Salma</p>
+                        <p>UX / UI Desinger</p>
+                    </div>
+                </div>
+                <div class="evaluation">
+                    <img src="~/img/Testimonials/star-solid-lg.svg" alt="star-icon">
+                    <img src="~/img/Testimonials/star-solid-lg.svg" alt="star-icon">
+                    <img src="~/img/Testimonials/star-solid-lg.svg" alt="star-icon">
+                    <img src="~/img/Testimonials/star-solid-lg.svg" alt="star-icon">
+                    <img src="~/img/Testimonials/star-solid-lg.svg" alt="star-icon">
+                </div>
+                <q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, sapiente? Vel, dolores?</q>
+            </div>
+        </div>
+    </section>
+    <!-- End of Testimonial -->
+  
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <section class="what-we-give">
+        <div class="container">
+            <div class="title">
+                <p>KNOW YOURSELF</p>
+                <h2>How to Get to Know Yourself: A Guide to Self-Discovery</h2>
+                <p>The importance of knowing yourself: your key to fulfillment
+                </p>
+            </div>
+            <div class="card">
+                <a href="https://pomofocus.io/" target="_blank"><img src="~/img/whatwegive/duration-alt.svg" alt="icon"></a>
+                <h3>Pomodoro Timer</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non convallis molestie.
+                </p>
+            </div>
+            <div class="card">
+                <a href="https://www.proprofs.com/quiz-school/story.php?title=which-thinking-hat-are-you" target="_blank">
+                    <img src="~/img/whatwegive/hat-cowboy.svg" alt="icon">
+                </a>
+                <h3>Six Thinking Hats Test</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non convallis molestie.
+                </p>
+            </div>
+            <div class="card"> 
+                <a href="https://learningstylequiz.com/quiz/start" target="_blank"><img src="~/img/whatwegive/lesson.svg" alt="icon"></a>
+                <h3>Learning Style Quiz</h3>
+                <!-- <p>They are not scored or graded, and the results are not shared with anyone else. Their purpose is to give you insights into your strengths, weaknesses, and preferences to help you make informed decisions about your learning journey.
+                </p> -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non convallis molestie.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!------------------------------------------------------------------------------------------------------------------------------>
+   
+
+       <footer>
+        
+        <div class="container">
+            <div class="social-media">
+                <div class="logo" id="logo">
+                    <img src="~/img/LOGO/logo.svg" alt="Logo">
+                    <p>SOAR</p>
+                </div>
+                <p>
+                    © 2024 Soar.<br> انطلق نحو آفاق جديدة معنا<br> 
+                </p>
+            
+                <div class="social-logo">
+                    <img src="~/img/LOGO/facbook-logo.svg" alt="facebook-logo">
+                    <img src="~/img/LOGO/twitter.svg" alt="twitter-logo">
+                    <img src="~/img/LOGO/linkedin.svg" alt="linkedin-logo">
+                    <img src="~/img/LOGO/instagram.svg" alt="instagram-logo">
+                </div>
+            </div>
+            <div class="links">
+                <div class="home list">
+                    <ul>
+                        <li><a href="#lets-begin" class="header">home</a></li>
+                        <li><a href="#courses">course</a></li>
+                        <li><a href="#">about us</a></li>
+                    </ul>
+                </div>
+       
+                <div class="article list">
+                    <ul>
+                        <li><a href="#" class="header">Link</a></li>
+                        <li><a href="https://pomofocus.io/" target="_blank">Pomodoro Timer</a></li>
+                        <li><a href="https://www.proprofs.com/quiz-school/story.php?title=which-thinking-hat-are-you" target="_blank">Six Hat Thinking</a></li>
+                        <li><a href="https://learningstylequiz.com/quiz/start" target="_blank">Learning Style Quiz</a></li>
+                       
+                    </ul>
+                </div>
+                <div class="contact-us list">
+                    <ul>
+                        <li><a href="#" class="header" id="Contact-us">Contact us</a></li>
+                        <li><a href="#">Ghaida.20004@gmail.com</a></li>
+                        <li><a href="#">yararabaya4@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style="  background-color: #393E46; "></div>
+
+    </footer>
+
+<script src="~/js/index.js"></script>
+
+</body>
+
+    
+</html>
